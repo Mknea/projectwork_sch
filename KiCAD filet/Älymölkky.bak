@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Älymölkky-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -276,7 +275,7 @@ F 3 "~" H 3750 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Nordic_modified:nRF52810-QCxx U?
+L nrf52810-qcxx:nRF52810-QCxx U?
 U 1 1 5C5D854C
 P 5050 5250
 F 0 "U?" H 5050 4164 50  0000 C CNN
