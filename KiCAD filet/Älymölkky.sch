@@ -36,7 +36,7 @@ F 3 "~" H 8950 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 8950 2900 0    50   ~ 0
-For LIS2DE12:\nThe device core is supplied through the Vdd line while the I/O pads are supplied through the\nVdd_IO line. Power supply decoupling capacitors (100 nF ceramic, 10 μF aluminum) should\nbe placed as near as possible to pin 9 of the device (common design practice).\n
+For LIS2DE12:\nThe device core is supplied through the Vdd line\nwhile the I/O pads are supplied through the Vdd_IO line. \nPower supply decoupling capacitors (100 nF ceramic,\n 10 μF aluminum) should be placed as near as possible to\npin 9 of the device (common design practice).\n
 Wire Wire Line
 	7650 4750 7650 3350
 Wire Wire Line
@@ -279,8 +279,8 @@ Wire Wire Line
 	5050 2800 5200 2800
 Wire Wire Line
 	5200 2800 5200 2850
-Text Notes 6150 2400 0    50   ~ 0
-Pin 32 to C9\nPin 25 to C8\nPin 9 to C5
+Text Notes 5900 2550 0    50   ~ 0
+VDD pins:\nPin 32 to C9\nPin 25 to C8\nPin 9 to C5
 Wire Wire Line
 	5250 4250 5250 4050
 Wire Wire Line
@@ -329,7 +329,7 @@ F 3 "~" H 4950 2300 50  0001 C CNN
 	1    4950 2300
 	1    0    0    -1  
 $EndComp
-Text Notes 5050 2100 0    50   ~ 0
+Text Notes 4950 2000 0    50   ~ 0
 Pin 29 (VSS) to DEC4 ground
 $Comp
 L Device:Crystal X1
@@ -476,7 +476,7 @@ L Device:Crystal X2
 U 1 1 5C6386A3
 P 6200 4000
 F 0 "X2" V 6154 4131 50  0000 L TNN
-F 1 "32MHz Crystal" V 6245 4131 50  0000 L CNN
+F 1 "32.768 kHz Crystal" V 6245 4131 50  0000 L CNN
 F 2 "" H 6200 4000 50  0001 C CNN
 F 3 "~" H 6200 4000 50  0001 C CNN
 	1    6200 4000
@@ -555,7 +555,7 @@ F 3 "~" H 3350 4700 50  0001 C CNN
 $EndComp
 Text Label 3800 4650 0    50   ~ 0
 ~VSS_PIN20
-Text Label 5450 6350 0    50   ~ 0
+Text Label 5050 6050 0    50   ~ 0
 ~VSS_PIN20
 Wire Wire Line
 	3250 4350 3350 4350
@@ -592,7 +592,7 @@ NoConn ~ 5950 4750
 NoConn ~ 5950 4850
 NoConn ~ 5950 5350
 NoConn ~ 5950 5650
-Text Notes 6100 5800 0    39   ~ 0
+Text Notes 6050 5800 0    39   ~ 0
 AIN0-AIN6+VDD/2 are multiplexer pins
 NoConn ~ 5950 5750
 NoConn ~ 5950 5850
@@ -656,4 +656,10 @@ F 3 "" H 6400 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 6400 2800
+Text Notes 2950 6100 0    50   ~ 0
+SWDCLK and SWDIO are serial wire debug ports
+Text Notes 2500 4250 0    50   ~ 0
+Placeholder for antenna
+Text Notes 5450 6300 0    50   ~ 0
+VSS pins:\nPin 20 to antenna ground\nPin 29 and 33 passive.
 $EndSCHEMATC
