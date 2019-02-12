@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Älymölkky-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Sensor_Motion:LIS2DE12 Accelerometer?
+L Sensor_Motion:LIS2DE12 Accelerometer
 U 1 1 5C5B4814
 P 7550 5250
-F 0 "Accelerometer?" H 7600 5928 50  0000 C CNN
+F 0 "Accelerometer" H 7600 5928 50  0000 C CNN
 F 1 "LIS2DE12" H 7600 5837 50  0000 C CNN
 F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 7700 5800 50  0001 L CNN
 F 3 "https://www.st.com/resource/en/datasheet/lis2DE12.pdf" H 7200 5250 50  0001 C CNN
@@ -151,15 +152,15 @@ Text Label 7150 5050 2    50   ~ 0
 Text Label 5950 4950 0    50   ~ 0
 ~CS
 $Comp
-L Device:L L?
+L Device:L L1
 U 1 1 5C5CAB8B
 P 3100 4350
-F 0 "L?" H 3153 4396 50  0000 L CNN
-F 1 "L" H 3153 4305 50  0000 L CNN
+F 0 "L1" V 3153 4396 50  0000 L TNN
+F 1 "3.9nH" V 3153 4305 50  0000 C CNN
 F 2 "" H 3100 4350 50  0001 C CNN
 F 3 "~" H 3100 4350 50  0001 C CNN
 	1    3100 4350
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
 Text Label 2500 4350 0    50   ~ 0
 ANTENNA
@@ -181,17 +182,17 @@ Text Label 5950 5250 0    50   ~ 0
 ~SCL_SPC
 Text Label 8050 5150 0    50   ~ 0
 ~INT1
-Text Label 5950 5450 0    50   ~ 0
+Text Label 5950 4750 0    50   ~ 0
 ~INT1
 Text Label 8050 5250 0    50   ~ 0
 ~INT2
-Text Label 5950 5550 0    50   ~ 0
+Text Label 5950 4850 0    50   ~ 0
 ~INT2
 Wire Wire Line
 	8050 5550 8950 5550
 Connection ~ 8950 5550
 Wire Wire Line
-	8950 5550 8950 5750
+	8950 5550 8950 5650
 $Comp
 L Device:C Vdd_nRF_C9
 U 1 1 5C5D0DD8
@@ -214,8 +215,6 @@ F 3 "~" H 6400 3000 50  0001 C CNN
 	1    6400 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4550 4250 4550 4050
 Wire Wire Line
 	4550 3400 3750 3400
 Wire Wire Line
@@ -254,14 +253,14 @@ F 3 "~" H 3750 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nrf52810-qcxx:nRF52810-QCxx U?
+L nrf52810-custom:nRF52810-QCxx U
 U 1 1 5C5D854C
-P 5050 5250
-F 0 "U?" H 5050 4164 50  0000 C CNN
-F 1 "nRF52810-QCxx" H 5050 4073 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm" H 5050 3900 50  0001 C CNN
-F 3 "http://infocenter.nordicsemi.com/pdf/nRF52810_PS_v1.1.pdf" H 4550 5450 50  0001 C CNN
-	1    5050 5250
+P 5050 5050
+F 0 "U" H 5050 3964 50  0000 C CNN
+F 1 "nRF52810-QCxx" H 5050 3873 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm" H 5050 3700 50  0001 C CNN
+F 3 "http://infocenter.nordicsemi.com/pdf/nRF52810_PS_v1.1.pdf" H 4550 5250 50  0001 C CNN
+	1    5050 5050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -282,8 +281,6 @@ Wire Wire Line
 Text Notes 5900 2550 0    50   ~ 0
 VDD pins:\nPin 32 to C9\nPin 25 to C8\nPin 9 to C5
 Wire Wire Line
-	5250 4250 5250 4050
-Wire Wire Line
 	5800 2800 5800 2850
 $Comp
 L power:VDD #PWR?
@@ -296,28 +293,6 @@ F 3 "" H 5800 2800 50  0001 C CNN
 	1    5800 2800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5050 2800 5050 4050
-$Comp
-L MCU_Nordic:nRF52810-QCxx U?
-U 1 1 5C61D533
-P 5050 5050
-F 0 "U?" H 5050 3964 50  0000 C CNN
-F 1 "nRF52810-QCxx" H 5050 3873 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm" H 5050 3700 50  0001 C CNN
-F 3 "http://infocenter.nordicsemi.com/pdf/nRF52810_PS_v1.1.pdf" H 4550 5250 50  0001 C CNN
-	1    5050 5050
-	1    0    0    -1  
-$EndComp
-Connection ~ 4550 4050
-Wire Wire Line
-	4550 4050 4550 3400
-Connection ~ 5050 4050
-Wire Wire Line
-	5050 4050 5050 4300
-Connection ~ 5250 4050
-Wire Wire Line
-	5250 4050 5250 3300
 $Comp
 L Device:C DEC4_C10
 U 1 1 5C61DF93
@@ -586,14 +561,9 @@ Wire Wire Line
 	4150 5750 3600 5750
 Wire Wire Line
 	4150 5850 3600 5850
-NoConn ~ 5950 4550
-NoConn ~ 5950 4650
-NoConn ~ 5950 4750
-NoConn ~ 5950 4850
 NoConn ~ 5950 5350
-NoConn ~ 5950 5650
-Text Notes 6050 5800 0    39   ~ 0
-AIN0-AIN6+VDD/2 are multiplexer pins
+Text Notes 5600 6100 0    39   ~ 0
+AIN0-AIN6+VDD/2\nare multiplexer pins
 NoConn ~ 5950 5750
 NoConn ~ 5950 5850
 Text Label 3600 5650 0    50   ~ 0
@@ -622,8 +592,6 @@ Wire Wire Line
 Wire Wire Line
 	5550 2800 5800 2800
 Connection ~ 5800 2800
-Wire Wire Line
-	5450 4050 5500 4050
 Wire Wire Line
 	5500 4050 5500 3500
 Wire Wire Line
@@ -658,8 +626,443 @@ $EndComp
 Connection ~ 6400 2800
 Text Notes 2950 6100 0    50   ~ 0
 SWDCLK and SWDIO are serial wire debug ports
-Text Notes 2500 4250 0    50   ~ 0
+Text Notes 1950 4250 0    50   ~ 0
 Placeholder for antenna
-Text Notes 5450 6300 0    50   ~ 0
+Text Notes 5250 6550 0    50   ~ 0
 VSS pins:\nPin 20 to antenna ground\nPin 29 and 33 passive.
+Wire Wire Line
+	5350 4050 5500 4050
+Wire Wire Line
+	5250 3300 5250 4250
+Wire Wire Line
+	5050 2800 5050 4300
+Wire Wire Line
+	4550 3400 4550 4250
+$Comp
+L Device:Battery_Cell Coin_cell_battery
+U 1 1 5C63C076
+P 7550 1600
+F 0 "Coin_cell_battery" V 7805 1650 50  0000 C CNN
+F 1 "3.3V" V 7714 1650 50  0000 C CNN
+F 2 "" V 7550 1660 50  0001 C CNN
+F 3 "~" V 7550 1660 50  0001 C CNN
+	1    7550 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5C6419EB
+P 7750 1600
+F 0 "#PWR?" H 7750 1350 50  0001 C CNN
+F 1 "Earth" H 7750 1450 50  0001 C CNN
+F 2 "" H 7750 1600 50  0001 C CNN
+F 3 "~" H 7750 1600 50  0001 C CNN
+	1    7750 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5C641A7C
+P 7150 1600
+F 0 "#PWR?" H 7150 1450 50  0001 C CNN
+F 1 "VDD" H 7167 1773 50  0000 C CNN
+F 2 "" H 7150 1600 50  0001 C CNN
+F 3 "" H 7150 1600 50  0001 C CNN
+	1    7150 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 1600 7650 1600
+Wire Wire Line
+	7150 1600 7250 1600
+Text Label 1750 950  2    50   ~ 0
+~CS
+$Comp
+L Connector:Conn_01x01_Male CS_TP
+U 1 1 5C64DAC7
+P 2050 950
+F 0 "CS_TP" H 2023 926 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 971 50  0001 R CNN
+F 2 "" H 2050 950 50  0001 C CNN
+F 3 "~" H 2050 950 50  0001 C CNN
+	1    2050 950 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1850 950  1750 950 
+Text Label 1750 1100 2    50   ~ 0
+~SDA_SDI
+Text Label 1750 1250 2    50   ~ 0
+~SAO_SDO
+Text Label 1750 1400 2    50   ~ 0
+~SCL_SPC
+$Comp
+L Connector:Conn_01x01_Male SDA_SDI_TP
+U 1 1 5C6511F5
+P 2050 1100
+F 0 "SDA_SDI_TP" H 2023 1076 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 1121 50  0001 R CNN
+F 2 "" H 2050 1100 50  0001 C CNN
+F 3 "~" H 2050 1100 50  0001 C CNN
+	1    2050 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male SAO_SDO_TP
+U 1 1 5C651237
+P 2050 1250
+F 0 "SAO_SDO_TP" H 2022 1226 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 1271 50  0001 R CNN
+F 2 "" H 2050 1250 50  0001 C CNN
+F 3 "~" H 2050 1250 50  0001 C CNN
+	1    2050 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male SCL_SPC_TP
+U 1 1 5C651279
+P 2050 1400
+F 0 "SCL_SPC_TP" H 2023 1376 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 1421 50  0001 R CNN
+F 2 "" H 2050 1400 50  0001 C CNN
+F 3 "~" H 2050 1400 50  0001 C CNN
+	1    2050 1400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1750 1100 1850 1100
+Wire Wire Line
+	1750 1250 1850 1250
+Wire Wire Line
+	1850 1400 1750 1400
+Text Label 1750 1550 2    50   ~ 0
+~INT1
+Text Label 1750 1700 2    50   ~ 0
+~INT2
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even Serial_wire_debug_interconnector
+U 1 1 5C65B530
+P 1750 6600
+F 0 "Serial_wire_debug_interconnector" H 1800 7017 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 1800 6926 50  0000 C CNN
+F 2 "" H 1750 6600 50  0001 C CNN
+F 3 "~" H 1750 6600 50  0001 C CNN
+	1    1750 6600
+	1    0    0    -1  
+$EndComp
+Text Notes 1400 750  0    50   ~ 0
+LIS-NRF connections test points
+Text Notes 3750 750  0    50   ~ 0
+Power and ground test points
+Text Notes 1400 2550 0    50   ~ 0
+Serial wire debug + reset test points
+$Comp
+L Connector:Conn_01x01_Male INT1_TP
+U 1 1 5C66C452
+P 2050 1550
+F 0 "INT1_TP" H 2023 1526 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 1571 50  0001 R CNN
+F 2 "" H 2050 1550 50  0001 C CNN
+F 3 "~" H 2050 1550 50  0001 C CNN
+	1    2050 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male INT2_TP
+U 1 1 5C66C49A
+P 2050 1700
+F 0 "INT2_TP" H 2023 1676 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 1721 50  0001 R CNN
+F 2 "" H 2050 1700 50  0001 C CNN
+F 3 "~" H 2050 1700 50  0001 C CNN
+	1    2050 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1850 1550 1750 1550
+Wire Wire Line
+	1850 1700 1750 1700
+Text Label 7250 1750 0    50   ~ 0
+~VDD
+Wire Wire Line
+	7250 1600 7250 1750
+Connection ~ 7250 1600
+Wire Wire Line
+	7250 1600 7350 1600
+Text Label 3750 950  2    50   ~ 0
+~VDD
+$Comp
+L Connector:Conn_01x01_Male VDD_TP
+U 1 1 5C676512
+P 4150 950
+F 0 "VDD_TP" H 4122 926 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 4123 971 50  0001 R CNN
+F 2 "" H 4150 950 50  0001 C CNN
+F 3 "~" H 4150 950 50  0001 C CNN
+	1    4150 950 
+	-1   0    0    1   
+$EndComp
+Text Label 9100 5650 0    50   ~ 0
+~GND
+Wire Wire Line
+	9100 5650 8950 5650
+Connection ~ 8950 5650
+Wire Wire Line
+	8950 5650 8950 5750
+Text Label 3750 1150 2    50   ~ 0
+~GND
+Wire Wire Line
+	3750 950  3950 950 
+$Comp
+L Connector:Conn_01x01_Male GND_TP
+U 1 1 5C67D93F
+P 4150 1150
+F 0 "GND_TP" H 4122 1126 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 4123 1171 50  0001 R CNN
+F 2 "" H 4150 1150 50  0001 C CNN
+F 3 "~" H 4150 1150 50  0001 C CNN
+	1    4150 1150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3750 1150 3950 1150
+Text Label 2200 6400 0    50   ~ 0
+~SWDIO
+Text Label 2200 6500 0    50   ~ 0
+~SWDCLK
+Text Label 2200 6800 0    50   ~ 0
+~Reset
+NoConn ~ 2050 6700
+Text Label 5950 5450 0    50   ~ 0
+~P0.18
+Text Label 2200 6600 0    50   ~ 0
+~P0.18
+Wire Wire Line
+	2200 6400 2050 6400
+Wire Wire Line
+	2050 6500 2200 6500
+Wire Wire Line
+	2200 6600 2050 6600
+Wire Wire Line
+	2200 6800 2050 6800
+$Comp
+L power:VDD #PWR?
+U 1 1 5C695765
+P 1050 6400
+F 0 "#PWR?" H 1050 6250 50  0001 C CNN
+F 1 "VDD" H 1067 6573 50  0000 C CNN
+F 2 "" H 1050 6400 50  0001 C CNN
+F 3 "" H 1050 6400 50  0001 C CNN
+	1    1050 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5C6957BC
+P 1050 6850
+F 0 "#PWR?" H 1050 6600 50  0001 C CNN
+F 1 "Earth" H 1050 6700 50  0001 C CNN
+F 2 "" H 1050 6850 50  0001 C CNN
+F 3 "~" H 1050 6850 50  0001 C CNN
+	1    1050 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 6400 1550 6400
+Wire Wire Line
+	1550 6500 1050 6500
+Wire Wire Line
+	1050 6500 1050 6600
+Wire Wire Line
+	1050 6600 1550 6600
+Wire Wire Line
+	1550 6800 1050 6800
+Wire Wire Line
+	1050 6800 1050 6600
+Connection ~ 1050 6600
+Wire Wire Line
+	1050 6800 1050 6850
+Connection ~ 1050 6800
+NoConn ~ 1550 6700
+$Comp
+L Connector:Conn_01x06_Male Serial_program/debug
+U 1 1 5C6AC2F0
+P 1700 7350
+F 0 "Serial_program/debug" H 1806 7728 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 1806 7637 50  0000 C CNN
+F 2 "" H 1700 7350 50  0001 C CNN
+F 3 "~" H 1700 7350 50  0001 C CNN
+	1    1700 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ALT LED1
+U 1 1 5C6B701C
+P 6450 5550
+F 0 "LED1" H 6442 5319 39  0000 C CNN
+F 1 "LED_ALT" H 6442 5394 39  0000 C CNN
+F 2 "" H 6450 5550 50  0001 C CNN
+F 3 "~" H 6450 5550 50  0001 C CNN
+	1    6450 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED_ALT LED2
+U 1 1 5C6B7387
+P 6450 5900
+F 0 "LED2" H 6442 5669 39  0000 C CNN
+F 1 "LED_ALT" H 6442 5744 39  0000 C CNN
+F 2 "" H 6450 5900 50  0001 C CNN
+F 3 "~" H 6450 5900 50  0001 C CNN
+	1    6450 5900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5950 5550 6300 5550
+Wire Wire Line
+	5950 5650 6300 5650
+Wire Wire Line
+	6300 5650 6300 5900
+$Comp
+L power:Earth #PWR?
+U 1 1 5C6C5BDC
+P 6900 6350
+F 0 "#PWR?" H 6900 6100 50  0001 C CNN
+F 1 "Earth" H 6900 6200 50  0001 C CNN
+F 2 "" H 6900 6350 50  0001 C CNN
+F 3 "~" H 6900 6350 50  0001 C CNN
+	1    6900 6350
+	1    0    0    -1  
+$EndComp
+Text Label 5950 4550 0    50   ~ 0
+~P0.04
+Text Label 5950 4650 0    50   ~ 0
+~P0.05
+NoConn ~ 1900 7150
+NoConn ~ 1900 7550
+Text Label 2200 7250 0    50   ~ 0
+~P0.04
+Text Label 2200 7350 0    50   ~ 0
+~P0.05
+$Comp
+L power:VDD #PWR?
+U 1 1 5C6D1589
+P 2550 7450
+F 0 "#PWR?" H 2550 7300 50  0001 C CNN
+F 1 "VDD" H 2567 7623 50  0000 C CNN
+F 2 "" H 2550 7450 50  0001 C CNN
+F 3 "" H 2550 7450 50  0001 C CNN
+	1    2550 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5C6D168B
+P 2550 7650
+F 0 "#PWR?" H 2550 7400 50  0001 C CNN
+F 1 "Earth" H 2550 7500 50  0001 C CNN
+F 2 "" H 2550 7650 50  0001 C CNN
+F 3 "~" H 2550 7650 50  0001 C CNN
+	1    2550 7650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 7250 2200 7250
+Wire Wire Line
+	1900 7350 2200 7350
+Wire Wire Line
+	1900 7450 2550 7450
+Wire Wire Line
+	1900 7650 2550 7650
+Text Label 1750 2700 2    50   ~ 0
+~SWDIO
+Text Label 1750 2850 2    50   ~ 0
+~SWDCLK
+$Comp
+L Connector:Conn_01x01_Male SDWIO_TP
+U 1 1 5C6E93AB
+P 2050 2700
+F 0 "SDWIO_TP" H 2022 2676 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 2721 50  0001 R CNN
+F 2 "" H 2050 2700 50  0001 C CNN
+F 3 "~" H 2050 2700 50  0001 C CNN
+	1    2050 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male SWDCLK_TP
+U 1 1 5C6E9415
+P 2050 2850
+F 0 "SWDCLK_TP" H 2022 2826 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 2871 50  0001 R CNN
+F 2 "" H 2050 2850 50  0001 C CNN
+F 3 "~" H 2050 2850 50  0001 C CNN
+	1    2050 2850
+	-1   0    0    1   
+$EndComp
+Text Label 1750 3000 2    50   ~ 0
+~P0.18
+Text Label 1750 3150 2    50   ~ 0
+~Reset
+$Comp
+L Connector:Conn_01x01_Male P0.18_TP
+U 1 1 5C6E9BB1
+P 2050 3000
+F 0 "P0.18_TP" H 2022 2976 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 3021 50  0001 R CNN
+F 2 "" H 2050 3000 50  0001 C CNN
+F 3 "~" H 2050 3000 50  0001 C CNN
+	1    2050 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male RESET_TP
+U 1 1 5C6E9C11
+P 2050 3150
+F 0 "RESET_TP" H 2023 3126 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 2023 3171 50  0001 R CNN
+F 2 "" H 2050 3150 50  0001 C CNN
+F 3 "~" H 2050 3150 50  0001 C CNN
+	1    2050 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R_LED_1
+U 1 1 5C6EA6AC
+P 7150 6050
+F 0 "R_LED_1" H 7220 6088 39  0000 L CNN
+F 1 "220" H 7220 6013 39  0000 L CNN
+F 2 "" V 7080 6050 50  0001 C CNN
+F 3 "~" H 7150 6050 50  0001 C CNN
+	1    7150 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R_LED_2
+U 1 1 5C6EA75C
+P 6750 6050
+F 0 "R_LED_2" H 6820 6088 39  0000 L CNN
+F 1 "220" H 6820 6013 39  0000 L CNN
+F 2 "" V 6680 6050 50  0001 C CNN
+F 3 "~" H 6750 6050 50  0001 C CNN
+	1    6750 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5900 6750 5900
+Wire Wire Line
+	6900 6300 6900 6350
+Wire Wire Line
+	6900 6300 6750 6300
+Wire Wire Line
+	6750 6300 6750 6200
+Connection ~ 6900 6300
+Wire Wire Line
+	6600 5550 7150 5550
+Wire Wire Line
+	7150 5550 7150 5900
+Wire Wire Line
+	7150 6200 7150 6300
+Wire Wire Line
+	6900 6300 7150 6300
 $EndSCHEMATC
