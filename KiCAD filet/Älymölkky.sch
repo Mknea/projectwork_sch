@@ -155,8 +155,8 @@ $Comp
 L Device:L L1
 U 1 1 5C5CAB8B
 P 3100 4350
-F 0 "L1" V 3153 4396 50  0000 L TNN
-F 1 "3.9nH" V 3153 4305 50  0000 C CNN
+F 0 "L1" V 3000 4350 50  0000 L TNN
+F 1 "3.9nH" V 3200 4350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3100 4350 50  0001 C CNN
 F 3 "~" H 3100 4350 50  0001 C CNN
 	1    3100 4350
@@ -275,8 +275,6 @@ F 3 "~" H 5800 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5050 2800 5200 2800
-Wire Wire Line
 	5200 2800 5200 2850
 Text Notes 5900 2550 0    50   ~ 0
 VDD pins:\nPin 32 to C9\nPin 25 to C8\nPin 9 to C5
@@ -307,13 +305,13 @@ $EndComp
 Text Notes 5100 1500 0    50   ~ 0
 Pin 29 (VSS) to DEC4 ground
 $Comp
-L Device:Crystal X1
+L Device:Crystal_GND24 X1
 U 1 1 5C620103
 P 3000 5050
-F 0 "X1" V 2954 5181 50  0000 L CNN
-F 1 "32MHz Crystal" V 3045 5181 50  0000 L CNN
-F 2 "" H 3000 5050 50  0001 C CNN
-F 3 "~" H 3000 5050 50  0001 C CNN
+F 0 "X1" V 2950 5300 50  0000 L CNN
+F 1 "32MHz Crystal" V 3050 5300 50  0000 L CNN
+F 2 "Custom_footprints_alymolkky:Crystal_3.2x2.5x0.8" H 3000 5050 50  0001 C CNN
+F 3 "https://www.mouser.fi/ProductDetail/ECS/ECS-320-8-33-RWY-TR?qs=sGAEpiMZZMsBj6bBr9Q9abMK2mGYOCsJNNEntTUpRFbSy%252b%2fVo4P4%252bg%3d%3d" H 3000 5050 50  0001 C CNN
 	1    3000 5050
 	0    1    1    0   
 $EndComp
@@ -323,7 +321,7 @@ U 1 1 5C620184
 P 2500 4850
 F 0 "XC1_C1" V 2248 4850 50  0000 C CNN
 F 1 "12pF" V 2339 4850 50  0000 C CNN
-F 2 "" H 2538 4700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2538 4700 50  0001 C CNN
 F 3 "~" H 2500 4850 50  0001 C CNN
 	1    2500 4850
 	0    1    1    0   
@@ -334,7 +332,7 @@ U 1 1 5C6201DB
 P 2500 5300
 F 0 "XC2_C2" V 2248 5300 50  0000 C CNN
 F 1 "12pF" V 2339 5300 50  0000 C CNN
-F 2 "" H 2538 5150 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2538 5150 50  0001 C CNN
 F 3 "~" H 2500 5300 50  0001 C CNN
 	1    2500 5300
 	0    1    1    0   
@@ -436,16 +434,14 @@ $EndComp
 Wire Wire Line
 	3550 3150 3550 3250
 Connection ~ 3550 3150
-Wire Wire Line
-	2950 4350 2500 4350
 $Comp
 L Device:Crystal X2
 U 1 1 5C6386A3
 P 6200 4000
 F 0 "X2" V 6154 4131 50  0000 L TNN
 F 1 "32.768 kHz Crystal" V 6245 4131 50  0000 L CNN
-F 2 "" H 6200 4000 50  0001 C CNN
-F 3 "~" H 6200 4000 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm" H 6200 4000 50  0001 C CNN
+F 3 "https://www.mouser.fi/ProductDetail/Epson-Timing/FC-135-327680KA-AC3?qs=sGAEpiMZZMsBj6bBr9Q9aZLqXgWtLYAXwYm2VNVNmc4%3D" H 6200 4000 50  0001 C CNN
 	1    6200 4000
 	0    1    1    0   
 $EndComp
@@ -455,7 +451,7 @@ U 1 1 5C6386F1
 P 6550 3750
 F 0 "XL1_C11" V 6298 3750 50  0000 C CNN
 F 1 "12pF" V 6389 3750 50  0000 C CNN
-F 2 "" H 6588 3600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6588 3600 50  0001 C CNN
 F 3 "~" H 6550 3750 50  0001 C CNN
 	1    6550 3750
 	0    1    1    0   
@@ -466,7 +462,7 @@ U 1 1 5C638747
 P 6550 4200
 F 0 "XL2_C12" V 6700 4200 50  0000 C TNN
 F 1 "12pF" V 6850 4200 50  0000 C CNN
-F 2 "" H 6588 4050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6588 4050 50  0001 C CNN
 F 3 "~" H 6550 4200 50  0001 C CNN
 	1    6550 4200
 	0    1    1    0   
@@ -532,7 +528,7 @@ U 1 1 5C6457A4
 P 3350 4500
 F 0 "VSS_PIN20_C3" H 3465 4546 50  0000 L CNN
 F 1 "0.8pF" H 3465 4455 50  0000 L CNN
-F 2 "" H 3388 4350 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3388 4350 50  0001 C CNN
 F 3 "~" H 3350 4500 50  0001 C CNN
 	1    3350 4500
 	1    0    0    -1  
@@ -624,12 +620,6 @@ Text Notes 5250 6550 0    50   ~ 0
 VSS pins:\nPin 20 to antenna ground\nPin 29 and 33 passive.
 Wire Wire Line
 	5350 4050 5500 4050
-Wire Wire Line
-	5250 3300 5250 4250
-Wire Wire Line
-	5050 2800 5050 4300
-Wire Wire Line
-	4550 3400 4550 4250
 $Comp
 L Device:Battery_Cell Coin_cell_battery1
 U 1 1 5C63C076
@@ -1094,7 +1084,7 @@ U 1 1 5C68445F
 P 4500 2200
 F 0 "DCC_L2" H 4553 2246 50  0000 L CNN
 F 1 "10uH" H 4553 2155 50  0000 L CNN
-F 2 "" H 4500 2200 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4500 2200 50  0001 C CNN
 F 3 "~" H 4500 2200 50  0001 C CNN
 	1    4500 2200
 	1    0    0    -1  
@@ -1105,7 +1095,7 @@ U 1 1 5C6844D9
 P 4500 1800
 F 0 "DCC_L3" H 4553 1846 50  0000 L CNN
 F 1 "15nH" H 4553 1755 50  0000 L CNN
-F 2 "" H 4500 1800 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4500 1800 50  0001 C CNN
 F 3 "~" H 4500 1800 50  0001 C CNN
 	1    4500 1800
 	1    0    0    -1  
@@ -1131,21 +1121,21 @@ The DC supply voltage should be decoupled as close as possible\nto the VDD pins
 Text Notes 550  5150 0    50   ~ 0
 "Fast switching digital signals\nshould not be routed close\nto the crystal or the power supply lines."
 $Comp
-L Connector:Conn_01x02_Male Power_Connection
+L Connector:Conn_01x02_Female Power_Connection1
 U 1 1 5C6A2D8F
-P 7400 2100
-F 0 "Power_Connection" H 7506 2278 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 7506 2187 50  0000 C CNN
-F 2 "" H 7400 2100 50  0001 C CNN
-F 3 "~" H 7400 2100 50  0001 C CNN
-	1    7400 2100
-	1    0    0    -1  
+P 7400 2200
+F 0 "Power_Connection1" H 7294 1875 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 7294 1966 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7400 2200 50  0001 C CNN
+F 3 "~" H 7400 2200 50  0001 C CNN
+	1    7400 2200
+	-1   0    0    1   
 $EndComp
 $Comp
-L power:VDD #PWR?
+L power:VDD #PWR0120
 U 1 1 5C6A36D5
 P 8000 2100
-F 0 "#PWR?" H 8000 1950 50  0001 C CNN
+F 0 "#PWR0120" H 8000 1950 50  0001 C CNN
 F 1 "VDD" H 8017 2273 50  0000 C CNN
 F 2 "" H 8000 2100 50  0001 C CNN
 F 3 "" H 8000 2100 50  0001 C CNN
@@ -1153,10 +1143,10 @@ F 3 "" H 8000 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:Earth #PWR?
+L power:Earth #PWR0121
 U 1 1 5C6A3736
 P 8000 2200
-F 0 "#PWR?" H 8000 1950 50  0001 C CNN
+F 0 "#PWR0121" H 8000 1950 50  0001 C CNN
 F 1 "Earth" H 8000 2050 50  0001 C CNN
 F 2 "" H 8000 2200 50  0001 C CNN
 F 3 "~" H 8000 2200 50  0001 C CNN
@@ -1167,4 +1157,80 @@ Wire Wire Line
 	8000 2100 7600 2100
 Wire Wire Line
 	7600 2200 8000 2200
+$Comp
+L power:Earth #PWR0122
+U 1 1 5C6B5FA7
+P 3200 5050
+F 0 "#PWR0122" H 3200 4800 50  0001 C CNN
+F 1 "Earth" H 3200 4900 50  0001 C CNN
+F 2 "" H 3200 5050 50  0001 C CNN
+F 3 "~" H 3200 5050 50  0001 C CNN
+	1    3200 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0123
+U 1 1 5C6B600F
+P 2800 5050
+F 0 "#PWR0123" H 2800 4800 50  0001 C CNN
+F 1 "Earth" H 2800 4900 50  0001 C CNN
+F 2 "" H 2800 5050 50  0001 C CNN
+F 3 "~" H 2800 5050 50  0001 C CNN
+	1    2800 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4050 5050 2800
+Wire Wire Line
+	5050 2800 5200 2800
+Wire Wire Line
+	5250 4050 5250 3300
+Wire Wire Line
+	4550 4050 4550 3400
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5C67417B
+P 2800 7450
+F 0 "#FLG0101" H 2800 7525 50  0001 C CNN
+F 1 "PWR_FLAG" H 2800 7624 50  0000 C CNN
+F 2 "" H 2800 7450 50  0001 C CNN
+F 3 "~" H 2800 7450 50  0001 C CNN
+	1    2800 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5C6741E3
+P 2800 7650
+F 0 "#FLG0102" H 2800 7725 50  0001 C CNN
+F 1 "PWR_FLAG" H 2800 7824 50  0000 C CNN
+F 2 "" H 2800 7650 50  0001 C CNN
+F 3 "~" H 2800 7650 50  0001 C CNN
+	1    2800 7650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 7650 2550 7650
+Connection ~ 2550 7650
+Wire Wire Line
+	2800 7450 2550 7450
+Connection ~ 2550 7450
+Wire Wire Line
+	2500 4350 2950 4350
+NoConn ~ 2500 4350
+$Comp
+L Connector:Conn_01x01_Male hupivia1
+U 1 1 5C69FFA8
+P 4150 1450
+F 0 "hupivia1" H 4122 1426 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 4123 1471 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4150 1450 50  0001 C CNN
+F 3 "~" H 4150 1450 50  0001 C CNN
+	1    4150 1450
+	-1   0    0    1   
+$EndComp
+Text Label 3750 1450 2    50   ~ 0
+~GND
+Wire Wire Line
+	3750 1450 3950 1450
 $EndSCHEMATC

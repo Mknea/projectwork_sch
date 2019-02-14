@@ -3,9 +3,9 @@
   (general
     (thickness 1.6)
     (drawings 0)
-    (tracks 8)
+    (tracks 0)
     (zones 0)
-    (modules 43)
+    (modules 42)
     (nets 38)
   )
 
@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.2)
     (user_trace_width 0.5)
     (trace_clearance 0.2)
     (zone_clearance 0.508)
@@ -176,31 +176,8 @@
     (add_net VDD)
   )
 
-  (module Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical (layer F.Cu) (tedit 5C657122) (tstamp 5C721368)
-    (at 99.5 20)
-    (descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
-    (tags "Through hole pin header THT 1x01 2.54mm single row")
-    (path /5C69FFA8)
-    (fp_text reference hupivia1 (at 0 -2.33) (layer F.SilkS)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value Conn_01x01_Male (at 0 2.33) (layer F.Fab)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text user %R (at 0 0 90) (layer F.Fab)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (pad 1 thru_hole circle (at 0 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
-      (net 4 Earth))
-    (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x01_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
-  )
-
   (module Package_LGA:LGA-12_2x2mm_P0.5mm (layer F.Cu) (tedit 5A0AAFFD) (tstamp 5C7200B0)
-    (at 25.5 20)
+    (at 22.825001 15.325001)
     (descr LGA12)
     (tags "lga land grid array")
     (path /5C5B4814)
@@ -664,7 +641,7 @@
   )
 
   (module Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical (layer F.Cu) (tedit 59FED5CC) (tstamp 5C720184)
-    (at 60.66 36.16)
+    (at 35.025001 13.025001)
     (descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x01 2.54mm single row")
     (path /5C67D93F)
@@ -1883,14 +1860,5 @@
       (rotate (xyz 0 0 0))
     )
   )
-
-  (segment (start 74.5 36.2) (end 70.17 36.2) (width 0.5) (layer B.Cu) (net 4) (status 400000))
-  (segment (start 64.14 36.16) (end 60.66 36.16) (width 0.5) (layer B.Cu) (net 4) (tstamp 5C722221) (status 800000))
-  (segment (start 64.52 36.54) (end 64.14 36.16) (width 0.5) (layer B.Cu) (net 4) (tstamp 5C722220))
-  (via (at 64.52 36.54) (size 1.6) (drill 0.8) (layers F.Cu B.Cu) (net 4))
-  (segment (start 69.83 36.54) (end 64.52 36.54) (width 0.5) (layer F.Cu) (net 4) (tstamp 5C72221E))
-  (segment (start 70.12 36.25) (end 69.83 36.54) (width 0.5) (layer F.Cu) (net 4) (tstamp 5C72221D))
-  (via (at 70.12 36.25) (size 1.6) (drill 0.8) (layers F.Cu B.Cu) (net 4))
-  (segment (start 70.17 36.2) (end 70.12 36.25) (width 0.5) (layer B.Cu) (net 4) (tstamp 5C72221B))
 
 )
