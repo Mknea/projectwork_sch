@@ -5,7 +5,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "ÄlyMölkky with internal DC/DC regulator setup"
 Date ""
 Rev ""
 Comp ""
@@ -296,15 +296,15 @@ $EndComp
 $Comp
 L Device:C DEC4_C10
 U 1 1 5C61DF93
-P 4950 2300
-F 0 "DEC4_C10" H 5065 2346 50  0000 L CNN
-F 1 "1.0uF" H 5065 2255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4988 2150 50  0001 C CNN
-F 3 "~" H 4950 2300 50  0001 C CNN
-	1    4950 2300
+P 5100 1950
+F 0 "DEC4_C10" H 5215 1996 50  0000 L CNN
+F 1 "1.0uF" H 5215 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5138 1800 50  0001 C CNN
+F 3 "~" H 5100 1950 50  0001 C CNN
+	1    5100 1950
 	1    0    0    -1  
 $EndComp
-Text Notes 4950 2000 0    50   ~ 0
+Text Notes 5100 1500 0    50   ~ 0
 Pin 29 (VSS) to DEC4 ground
 $Comp
 L Device:Crystal X1
@@ -375,25 +375,17 @@ $EndComp
 Wire Wire Line
 	2200 5300 2200 5400
 Connection ~ 2200 5300
-Wire Wire Line
-	4850 4050 4850 2050
-Wire Wire Line
-	4850 2050 4950 2050
-Wire Wire Line
-	4950 2050 4950 2150
 $Comp
 L power:Earth #PWR0107
 U 1 1 5C629483
-P 4950 2550
-F 0 "#PWR0107" H 4950 2300 50  0001 C CNN
-F 1 "Earth" H 4950 2400 50  0001 C CNN
-F 2 "" H 4950 2550 50  0001 C CNN
-F 3 "~" H 4950 2550 50  0001 C CNN
-	1    4950 2550
+P 5100 2200
+F 0 "#PWR0107" H 5100 1950 50  0001 C CNN
+F 1 "Earth" H 5100 2050 50  0001 C CNN
+F 2 "" H 5100 2200 50  0001 C CNN
+F 3 "~" H 5100 2200 50  0001 C CNN
+	1    5100 2200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4950 2450 4950 2550
 $Comp
 L Device:C DEC3_C7
 U 1 1 5C62B11C
@@ -1073,4 +1065,106 @@ Wire Wire Line
 	1750 3000 1850 3000
 Wire Wire Line
 	1750 3150 1850 3150
+$Comp
+L Device:C DEC4_C13
+U 1 1 5C664DC4
+P 5750 1950
+F 0 "DEC4_C13" H 5865 1996 50  0000 L CNN
+F 1 "N.C." H 5865 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5788 1800 50  0001 C CNN
+F 3 "~" H 5750 1950 50  0001 C CNN
+	1    5750 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2100 5100 2200
+Wire Wire Line
+	5750 2100 5100 2100
+Connection ~ 5100 2100
+Wire Wire Line
+	5100 1800 5750 1800
+Wire Wire Line
+	4850 4050 4850 1800
+Wire Wire Line
+	4850 1800 5100 1800
+Connection ~ 5100 1800
+$Comp
+L Device:L DCC_L2
+U 1 1 5C68445F
+P 4500 2200
+F 0 "DCC_L2" H 4553 2246 50  0000 L CNN
+F 1 "10uH" H 4553 2155 50  0000 L CNN
+F 2 "" H 4500 2200 50  0001 C CNN
+F 3 "~" H 4500 2200 50  0001 C CNN
+	1    4500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L DCC_L3
+U 1 1 5C6844D9
+P 4500 1800
+F 0 "DCC_L3" H 4553 1846 50  0000 L CNN
+F 1 "15nH" H 4553 1755 50  0000 L CNN
+F 2 "" H 4500 1800 50  0001 C CNN
+F 3 "~" H 4500 1800 50  0001 C CNN
+	1    4500 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4050 4950 2450
+Wire Wire Line
+	4950 2450 4500 2450
+Wire Wire Line
+	4500 2450 4500 2350
+Wire Wire Line
+	4500 2050 4500 1950
+Wire Wire Line
+	4500 1650 4500 1600
+Wire Wire Line
+	4500 1600 5100 1600
+Wire Wire Line
+	5100 1600 5100 1800
+Text Notes 600  4000 0    50   ~ 0
+"All reference circuits are designed for use\nwith a 50 Ω single-ended antenna"
+Text Notes 7100 1000 0    50   ~ 0
+The DC supply voltage should be decoupled as close as possible\nto the VDD pins
+Text Notes 550  5150 0    50   ~ 0
+"Fast switching digital signals\nshould not be routed close\nto the crystal or the power supply lines."
+$Comp
+L Connector:Conn_01x02_Male Power_Connection
+U 1 1 5C6A2D8F
+P 7400 2100
+F 0 "Power_Connection" H 7506 2278 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 7506 2187 50  0000 C CNN
+F 2 "" H 7400 2100 50  0001 C CNN
+F 3 "~" H 7400 2100 50  0001 C CNN
+	1    7400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5C6A36D5
+P 8000 2100
+F 0 "#PWR?" H 8000 1950 50  0001 C CNN
+F 1 "VDD" H 8017 2273 50  0000 C CNN
+F 2 "" H 8000 2100 50  0001 C CNN
+F 3 "" H 8000 2100 50  0001 C CNN
+	1    8000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5C6A3736
+P 8000 2200
+F 0 "#PWR?" H 8000 1950 50  0001 C CNN
+F 1 "Earth" H 8000 2050 50  0001 C CNN
+F 2 "" H 8000 2200 50  0001 C CNN
+F 3 "~" H 8000 2200 50  0001 C CNN
+	1    8000 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2100 7600 2100
+Wire Wire Line
+	7600 2200 8000 2200
 $EndSCHEMATC
