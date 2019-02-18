@@ -40,14 +40,6 @@ Text Notes 8950 2900 0    50   ~ 0
 For LIS2DE12:\nThe device core is supplied through the Vdd line\nwhile the I/O pads are supplied through the Vdd_IO line. \nPower supply decoupling capacitors (100 nF ceramic,\n 10 μF aluminum) should be placed as near as possible to\npin 9 of the device (common design practice).\n
 Wire Wire Line
 	7650 4750 7650 3350
-Wire Wire Line
-	7650 3350 7950 3350
-Wire Wire Line
-	7950 3000 8250 3000
-Wire Wire Line
-	8250 3000 8250 2750
-Wire Wire Line
-	7950 3000 7950 3350
 $Comp
 L power:Earth #PWR0101
 U 1 1 5C5B482B
@@ -60,27 +52,7 @@ F 3 "~" H 8950 6050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 5750 8950 5750
-Wire Wire Line
-	8950 5750 8950 5850
-Wire Wire Line
-	7550 5750 7550 5850
-Wire Wire Line
-	7550 5850 8950 5850
-Connection ~ 8950 5850
-Wire Wire Line
-	8950 5850 8950 5900
-Wire Wire Line
 	7450 5750 7450 5900
-Wire Wire Line
-	7450 5900 8950 5900
-Connection ~ 8950 5900
-Wire Wire Line
-	8950 5900 8950 6050
-Wire Wire Line
-	7950 3350 8950 3350
-Connection ~ 7950 3350
-Connection ~ 8950 5750
 $Comp
 L Device:C C_Vdd_2
 U 1 1 5C5B4840
@@ -115,14 +87,7 @@ Wire Wire Line
 Connection ~ 8950 4700
 Wire Wire Line
 	8950 4700 8950 5550
-Wire Wire Line
-	8200 4200 8200 3600
-Wire Wire Line
-	8500 3600 8500 2750
-Wire Wire Line
-	8500 2750 8250 2750
 Connection ~ 8200 4200
-Connection ~ 8250 2750
 $Comp
 L Device:C Vdd_nRF_C8
 U 1 1 5C5B4866
@@ -164,10 +129,6 @@ F 3 "~" H 3100 4350 50  0001 C CNN
 $EndComp
 Text Label 2500 4350 0    50   ~ 0
 ANTENNA
-Wire Wire Line
-	8100 2750 8250 2750
-Wire Wire Line
-	8500 3600 8200 3600
 Text Label 7150 5150 2    50   ~ 0
 ~SDA_SDI
 Text Label 5950 5050 0    50   ~ 0
@@ -191,8 +152,6 @@ Text Label 5950 4850 0    50   ~ 0
 Wire Wire Line
 	8050 5550 8950 5550
 Connection ~ 8950 5550
-Wire Wire Line
-	8950 5550 8950 5650
 $Comp
 L Device:C Vdd_nRF_C9
 U 1 1 5C5D0DD8
@@ -233,12 +192,12 @@ $EndComp
 $Comp
 L power:VDD #PWR0102
 U 1 1 5C5D4F0A
-P 8100 2750
-F 0 "#PWR0102" H 8100 2600 50  0001 C CNN
-F 1 "VDD" H 8117 2923 50  0000 C CNN
-F 2 "" H 8100 2750 50  0001 C CNN
-F 3 "" H 8100 2750 50  0001 C CNN
-	1    8100 2750
+P 8200 3350
+F 0 "#PWR0102" H 8200 3200 50  0001 C CNN
+F 1 "VDD" H 8217 3523 50  0000 C CNN
+F 2 "" H 8200 3350 50  0001 C CNN
+F 3 "" H 8200 3350 50  0001 C CNN
+	1    8200 3350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -316,10 +275,10 @@ F 3 "https://www.mouser.fi/ProductDetail/ECS/ECS-320-8-33-RWY-TR?qs=sGAEpiMZZMsB
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C XC1_C1
+L Device:C X1_C1
 U 1 1 5C620184
 P 2500 4850
-F 0 "XC1_C1" V 2248 4850 50  0000 C CNN
+F 0 "X1_C1" V 2248 4850 50  0000 C CNN
 F 1 "12pF" V 2339 4850 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2538 4700 50  0001 C CNN
 F 3 "~" H 2500 4850 50  0001 C CNN
@@ -327,10 +286,10 @@ F 3 "~" H 2500 4850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C XC2_C2
+L Device:C X1_C2
 U 1 1 5C6201DB
 P 2500 5300
-F 0 "XC2_C2" V 2248 5300 50  0000 C CNN
+F 0 "X1_C2" V 2248 5300 50  0000 C CNN
 F 1 "12pF" V 2339 5300 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2538 5150 50  0001 C CNN
 F 3 "~" H 2500 5300 50  0001 C CNN
@@ -446,10 +405,10 @@ F 3 "https://www.mouser.fi/ProductDetail/Epson-Timing/FC-135-327680KA-AC3?qs=sGA
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C XL1_C11
+L Device:C X2_C11
 U 1 1 5C6386F1
 P 6550 3750
-F 0 "XL1_C11" V 6298 3750 50  0000 C CNN
+F 0 "X2_C11" V 6298 3750 50  0000 C CNN
 F 1 "12pF" V 6389 3750 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6588 3600 50  0001 C CNN
 F 3 "~" H 6550 3750 50  0001 C CNN
@@ -457,10 +416,10 @@ F 3 "~" H 6550 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C XL2_C12
+L Device:C X2_C12
 U 1 1 5C638747
 P 6550 4200
-F 0 "XL2_C12" V 6700 4200 50  0000 C TNN
+F 0 "X2_C12" V 6700 4200 50  0000 C TNN
 F 1 "12pF" V 6850 4200 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6588 4050 50  0001 C CNN
 F 3 "~" H 6550 4200 50  0001 C CNN
@@ -623,40 +582,40 @@ Wire Wire Line
 $Comp
 L Device:Battery_Cell Coin_cell_battery1
 U 1 1 5C63C076
-P 7550 1600
-F 0 "Coin_cell_battery1" V 7805 1650 50  0000 C CNN
-F 1 "3.3V" V 7714 1650 50  0000 C CNN
-F 2 "" V 7550 1660 50  0001 C CNN
-F 3 "~" V 7550 1660 50  0001 C CNN
-	1    7550 1600
+P 9600 1500
+F 0 "Coin_cell_battery1" V 9855 1550 50  0000 C CNN
+F 1 "3.3V" V 9764 1550 50  0000 C CNN
+F 2 "" V 9600 1560 50  0001 C CNN
+F 3 "~" V 9600 1560 50  0001 C CNN
+	1    9600 1500
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:Earth #PWR0113
 U 1 1 5C6419EB
-P 7750 1600
-F 0 "#PWR0113" H 7750 1350 50  0001 C CNN
-F 1 "Earth" H 7750 1450 50  0001 C CNN
-F 2 "" H 7750 1600 50  0001 C CNN
-F 3 "~" H 7750 1600 50  0001 C CNN
-	1    7750 1600
+P 9800 1500
+F 0 "#PWR0113" H 9800 1250 50  0001 C CNN
+F 1 "Earth" H 9800 1350 50  0001 C CNN
+F 2 "" H 9800 1500 50  0001 C CNN
+F 3 "~" H 9800 1500 50  0001 C CNN
+	1    9800 1500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:VDD #PWR0114
 U 1 1 5C641A7C
-P 7150 1600
-F 0 "#PWR0114" H 7150 1450 50  0001 C CNN
-F 1 "VDD" H 7167 1773 50  0000 C CNN
-F 2 "" H 7150 1600 50  0001 C CNN
-F 3 "" H 7150 1600 50  0001 C CNN
-	1    7150 1600
+P 9200 1500
+F 0 "#PWR0114" H 9200 1350 50  0001 C CNN
+F 1 "VDD" H 9217 1673 50  0000 C CNN
+F 2 "" H 9200 1500 50  0001 C CNN
+F 3 "" H 9200 1500 50  0001 C CNN
+	1    9200 1500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7750 1600 7650 1600
+	9800 1500 9700 1500
 Wire Wire Line
-	7150 1600 7250 1600
+	9200 1500 9300 1500
 Text Label 1750 950  2    50   ~ 0
 ~CS
 $Comp
@@ -764,13 +723,13 @@ Wire Wire Line
 	1850 1550 1750 1550
 Wire Wire Line
 	1850 1700 1750 1700
-Text Label 7250 1750 0    50   ~ 0
+Text Label 9300 1650 0    50   ~ 0
 ~VDD
 Wire Wire Line
-	7250 1600 7250 1750
-Connection ~ 7250 1600
+	9300 1500 9300 1650
+Connection ~ 9300 1500
 Wire Wire Line
-	7250 1600 7350 1600
+	9300 1500 9400 1500
 Text Label 3750 950  2    50   ~ 0
 ~VDD
 $Comp
@@ -784,13 +743,8 @@ F 3 "~" H 4150 950 50  0001 C CNN
 	1    4150 950 
 	-1   0    0    1   
 $EndComp
-Text Label 9100 5650 0    50   ~ 0
+Text Label 9400 5900 0    50   ~ 0
 ~GND
-Wire Wire Line
-	9100 5650 8950 5650
-Connection ~ 8950 5650
-Wire Wire Line
-	8950 5650 8950 5750
 Text Label 3750 1150 2    50   ~ 0
 ~GND
 Wire Wire Line
@@ -816,9 +770,9 @@ Text Label 2200 6800 0    50   ~ 0
 ~Reset
 NoConn ~ 2050 6700
 Text Label 5950 5450 0    50   ~ 0
-~P0.18
+~SWO
 Text Label 2200 6600 0    50   ~ 0
-~P0.18
+~SWO
 Wire Wire Line
 	2200 6400 2050 6400
 Wire Wire Line
@@ -917,15 +871,15 @@ F 3 "~" H 6900 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 5950 4550 0    50   ~ 0
-~P0.04
+~RX1
 Text Label 5950 4650 0    50   ~ 0
-~P0.05
+~TX0
 NoConn ~ 1900 7150
 NoConn ~ 1900 7550
 Text Label 2200 7250 0    50   ~ 0
-~P0.04
+~RX1
 Text Label 2200 7350 0    50   ~ 0
-~P0.05
+~TX0
 $Comp
 L power:VDD #PWR0118
 U 1 1 5C6D1589
@@ -983,7 +937,7 @@ F 3 "~" H 2050 2850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label 1750 3000 2    50   ~ 0
-~P0.18
+~SWO
 Text Label 1750 3150 2    50   ~ 0
 ~Reset
 $Comp
@@ -1123,40 +1077,36 @@ Text Notes 550  5150 0    50   ~ 0
 $Comp
 L Connector:Conn_01x02_Female Power_Connection1
 U 1 1 5C6A2D8F
-P 7400 2200
-F 0 "Power_Connection1" H 7294 1875 50  0000 C CNN
-F 1 "Conn_01x02_Female" H 7294 1966 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7400 2200 50  0001 C CNN
-F 3 "~" H 7400 2200 50  0001 C CNN
-	1    7400 2200
+P 9200 2200
+F 0 "Power_Connection1" H 9350 1850 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 9350 1950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9200 2200 50  0001 C CNN
+F 3 "~" H 9200 2200 50  0001 C CNN
+	1    9200 2200
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:VDD #PWR0120
 U 1 1 5C6A36D5
-P 8000 2100
-F 0 "#PWR0120" H 8000 1950 50  0001 C CNN
-F 1 "VDD" H 8017 2273 50  0000 C CNN
-F 2 "" H 8000 2100 50  0001 C CNN
-F 3 "" H 8000 2100 50  0001 C CNN
-	1    8000 2100
+P 10150 2100
+F 0 "#PWR0120" H 10150 1950 50  0001 C CNN
+F 1 "VDD" H 10167 2273 50  0000 C CNN
+F 2 "" H 10150 2100 50  0001 C CNN
+F 3 "" H 10150 2100 50  0001 C CNN
+	1    10150 2100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:Earth #PWR0121
 U 1 1 5C6A3736
-P 8000 2200
-F 0 "#PWR0121" H 8000 1950 50  0001 C CNN
-F 1 "Earth" H 8000 2050 50  0001 C CNN
-F 2 "" H 8000 2200 50  0001 C CNN
-F 3 "~" H 8000 2200 50  0001 C CNN
-	1    8000 2200
+P 10150 2200
+F 0 "#PWR0121" H 10150 1950 50  0001 C CNN
+F 1 "Earth" H 10150 2050 50  0001 C CNN
+F 2 "" H 10150 2200 50  0001 C CNN
+F 3 "~" H 10150 2200 50  0001 C CNN
+	1    10150 2200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8000 2100 7600 2100
-Wire Wire Line
-	7600 2200 8000 2200
 $Comp
 L power:Earth #PWR0122
 U 1 1 5C6B5FA7
@@ -1233,4 +1183,45 @@ Text Label 3750 1450 2    50   ~ 0
 ~GND
 Wire Wire Line
 	3750 1450 3950 1450
+$Comp
+L Device:Polyfuse Resettable_Fuse1
+U 1 1 5C6C0B83
+P 9750 2100
+F 0 "Resettable_Fuse1" V 9525 2100 50  0000 C CNN
+F 1 "Polyfuse" V 9616 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9800 1900 50  0001 L CNN
+F 3 "~" H 9750 2100 50  0001 C CNN
+	1    9750 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9400 2100 9600 2100
+Wire Wire Line
+	9900 2100 10150 2100
+Wire Wire Line
+	9400 2200 10150 2200
+Wire Wire Line
+	7650 3350 8200 3350
+Connection ~ 8200 3350
+Wire Wire Line
+	8200 3350 8950 3350
+Wire Wire Line
+	8200 3350 8200 4200
+Wire Wire Line
+	8950 5550 8950 5900
+Wire Wire Line
+	7450 5900 7550 5900
+Connection ~ 8950 5900
+Wire Wire Line
+	8950 5900 8950 6050
+Wire Wire Line
+	7550 5750 7550 5900
+Connection ~ 7550 5900
+Wire Wire Line
+	7550 5900 7650 5900
+Wire Wire Line
+	7650 5750 7650 5900
+Connection ~ 7650 5900
+Wire Wire Line
+	7650 5900 8950 5900
 $EndSCHEMATC
