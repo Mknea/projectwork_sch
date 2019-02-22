@@ -114,7 +114,7 @@ Wire Wire Line
 	8950 3350 8950 3700
 Text Label 7150 5050 2    50   ~ 0
 ~CS
-Text Label 5950 4950 0    50   ~ 0
+Text Label 5950 4750 0    50   ~ 0
 ~CS
 $Comp
 L Device:L L1
@@ -131,23 +131,23 @@ Text Label 2500 4350 0    50   ~ 0
 ANTENNA
 Text Label 7150 5150 2    50   ~ 0
 ~SDA_SDI
-Text Label 5950 5050 0    50   ~ 0
+Text Label 5950 4550 0    50   ~ 0
 ~SDA_SDI
 Text Label 7150 5250 2    50   ~ 0
 ~SAO_SDO
-Text Label 5950 5150 0    50   ~ 0
+Text Label 5950 4650 0    50   ~ 0
 ~SAO_SDO
 Text Label 7150 5350 2    50   ~ 0
 ~SCL_SPC
-Text Label 5950 5250 0    50   ~ 0
+Text Label 5950 4850 0    50   ~ 0
 ~SCL_SPC
 Text Label 8050 5150 0    50   ~ 0
 ~INT1
-Text Label 5950 4750 0    50   ~ 0
+Text Label 5950 4950 0    50   ~ 0
 ~INT1
 Text Label 8050 5250 0    50   ~ 0
 ~INT2
-Text Label 5950 4850 0    50   ~ 0
+Text Label 5950 5050 0    50   ~ 0
 ~INT2
 Wire Wire Line
 	8050 5550 8950 5550
@@ -508,7 +508,6 @@ Wire Wire Line
 	4150 5750 3600 5750
 Wire Wire Line
 	4150 5850 3600 5850
-NoConn ~ 5950 5350
 Text Notes 5600 6100 0    39   ~ 0
 AIN0-AIN6+VDD/2\nare multiplexer pins
 NoConn ~ 5950 5750
@@ -834,12 +833,12 @@ $EndComp
 $Comp
 L Device:LED_ALT LED1
 U 1 1 5C6B701C
-P 6450 5450
-F 0 "LED1" H 6442 5219 39  0000 C CNN
-F 1 "LED_ALT" H 6442 5294 39  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6450 5450 50  0001 C CNN
-F 3 "~" H 6450 5450 50  0001 C CNN
-	1    6450 5450
+P 6350 5150
+F 0 "LED1" H 6342 4919 39  0000 C CNN
+F 1 "LED_ALT" H 6342 4994 39  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6350 5150 50  0001 C CNN
+F 3 "~" H 6350 5150 50  0001 C CNN
+	1    6350 5150
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -868,9 +867,9 @@ F 3 "~" H 6900 6350 50  0001 C CNN
 	1    6900 6350
 	1    0    0    -1  
 $EndComp
-Text Label 5950 4550 0    50   ~ 0
+Text Label 5950 5250 0    50   ~ 0
 ~RX1
-Text Label 5950 4650 0    50   ~ 0
+Text Label 5950 5350 0    50   ~ 0
 ~TX0
 NoConn ~ 1900 7150
 NoConn ~ 1900 7550
@@ -1219,9 +1218,14 @@ Connection ~ 7650 5900
 Wire Wire Line
 	7650 5900 8950 5900
 Wire Wire Line
-	5950 5450 6300 5450
-Wire Wire Line
 	7150 5450 6600 5450
 Wire Wire Line
 	7150 5450 7150 5900
+Wire Wire Line
+	5950 5150 6200 5150
+Wire Wire Line
+	6500 5150 6600 5150
+Wire Wire Line
+	6600 5150 6600 5450
+NoConn ~ 5950 5450
 $EndSCHEMATC
