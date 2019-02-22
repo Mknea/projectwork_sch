@@ -769,7 +769,7 @@ Text Label 2200 6500 0    50   ~ 0
 Text Label 2200 6800 0    50   ~ 0
 ~Reset
 NoConn ~ 2050 6700
-Text Label 5950 5450 0    50   ~ 0
+Text Label 5950 5550 0    50   ~ 0
 ~SWO
 Text Label 2200 6600 0    50   ~ 0
 ~SWO
@@ -834,12 +834,12 @@ $EndComp
 $Comp
 L Device:LED_ALT LED1
 U 1 1 5C6B701C
-P 6450 5550
-F 0 "LED1" H 6442 5319 39  0000 C CNN
-F 1 "LED_ALT" H 6442 5394 39  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6450 5550 50  0001 C CNN
-F 3 "~" H 6450 5550 50  0001 C CNN
-	1    6450 5550
+P 6450 5450
+F 0 "LED1" H 6442 5219 39  0000 C CNN
+F 1 "LED_ALT" H 6442 5294 39  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6450 5450 50  0001 C CNN
+F 3 "~" H 6450 5450 50  0001 C CNN
+	1    6450 5450
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -853,8 +853,6 @@ F 3 "~" H 6450 5900 50  0001 C CNN
 	1    6450 5900
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5950 5550 6300 5550
 Wire Wire Line
 	5950 5650 6300 5650
 Wire Wire Line
@@ -993,10 +991,6 @@ Wire Wire Line
 Wire Wire Line
 	6750 6300 6750 6200
 Connection ~ 6900 6300
-Wire Wire Line
-	6600 5550 7150 5550
-Wire Wire Line
-	7150 5550 7150 5900
 Wire Wire Line
 	7150 6200 7150 6300
 Wire Wire Line
@@ -1224,4 +1218,10 @@ Wire Wire Line
 Connection ~ 7650 5900
 Wire Wire Line
 	7650 5900 8950 5900
+Wire Wire Line
+	5950 5450 6300 5450
+Wire Wire Line
+	7150 5450 6600 5450
+Wire Wire Line
+	7150 5450 7150 5900
 $EndSCHEMATC
