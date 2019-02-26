@@ -122,7 +122,7 @@ U 1 1 5C5CAB8B
 P 3100 4350
 F 0 "L1" V 3000 4350 50  0000 L TNN
 F 1 "3.9nH" V 3200 4350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3100 4350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3100 4350 50  0001 C CNN
 F 3 "~" H 3100 4350 50  0001 C CNN
 	1    3100 4350
 	0    -1   -1   0   
@@ -280,7 +280,7 @@ U 1 1 5C620184
 P 2500 4850
 F 0 "X1_C1" V 2248 4850 50  0000 C CNN
 F 1 "12pF" V 2339 4850 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2538 4700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2538 4700 50  0001 C CNN
 F 3 "~" H 2500 4850 50  0001 C CNN
 	1    2500 4850
 	0    1    1    0   
@@ -291,7 +291,7 @@ U 1 1 5C6201DB
 P 2500 5300
 F 0 "X1_C2" V 2248 5300 50  0000 C CNN
 F 1 "12pF" V 2339 5300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2538 5150 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2538 5150 50  0001 C CNN
 F 3 "~" H 2500 5300 50  0001 C CNN
 	1    2500 5300
 	0    1    1    0   
@@ -410,7 +410,7 @@ U 1 1 5C6386F1
 P 6550 3750
 F 0 "X2_C11" V 6298 3750 50  0000 C CNN
 F 1 "12pF" V 6389 3750 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6588 3600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6588 3600 50  0001 C CNN
 F 3 "~" H 6550 3750 50  0001 C CNN
 	1    6550 3750
 	0    1    1    0   
@@ -421,7 +421,7 @@ U 1 1 5C638747
 P 6550 4200
 F 0 "X2_C12" V 6700 4200 50  0000 C TNN
 F 1 "12pF" V 6850 4200 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6588 4050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6588 4050 50  0001 C CNN
 F 3 "~" H 6550 4200 50  0001 C CNN
 	1    6550 4200
 	0    1    1    0   
@@ -1042,7 +1042,7 @@ U 1 1 5C6844D9
 P 4500 1800
 F 0 "DCC_L3" H 4553 1846 50  0000 L CNN
 F 1 "15nH" H 4553 1755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4500 1800 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4500 1800 50  0001 C CNN
 F 3 "~" H 4500 1800 50  0001 C CNN
 	1    4500 1800
 	1    0    0    -1  
@@ -1070,12 +1070,12 @@ Text Notes 550  5150 0    50   ~ 0
 $Comp
 L Connector:Conn_01x02_Female Power_Connection1
 U 1 1 5C6A2D8F
-P 9200 2200
-F 0 "Power_Connection1" H 9350 1850 50  0000 C CNN
-F 1 "Conn_01x02_Female" H 9350 1950 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9200 2200 50  0001 C CNN
-F 3 "~" H 9200 2200 50  0001 C CNN
-	1    9200 2200
+P 8250 2200
+F 0 "Power_Connection1" H 8400 1850 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 8400 1950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8250 2200 50  0001 C CNN
+F 3 "~" H 8250 2200 50  0001 C CNN
+	1    8250 2200
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1185,11 +1185,7 @@ F 3 "~" H 9750 2100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9400 2100 9600 2100
-Wire Wire Line
 	9900 2100 10150 2100
-Wire Wire Line
-	9400 2200 10150 2200
 Wire Wire Line
 	7650 3350 8200 3350
 Connection ~ 8200 3350
@@ -1269,10 +1265,10 @@ Wire Wire Line
 Text Label 3750 1450 2    50   ~ 0
 ~GND
 $Comp
-L power:Earth #PWR?
+L power:Earth #PWR0126
 U 1 1 5C74A65C
 P 3850 1600
-F 0 "#PWR?" H 3850 1350 50  0001 C CNN
+F 0 "#PWR0126" H 3850 1350 50  0001 C CNN
 F 1 "Earth" H 3850 1450 50  0001 C CNN
 F 2 "" H 3850 1600 50  0001 C CNN
 F 3 "~" H 3850 1600 50  0001 C CNN
@@ -1284,4 +1280,32 @@ Wire Wire Line
 Connection ~ 3850 1450
 Wire Wire Line
 	3850 1450 3950 1450
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even Power_Switch1
+U 1 1 5C758E30
+P 8900 1800
+F 0 "Power_Switch1" V 9300 2050 50  0000 R CNN
+F 1 "Conn_02x03_Odd_Even" V 9400 2400 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical_SMD" H 8900 1800 50  0001 C CNN
+F 3 "~" H 8900 1800 50  0001 C CNN
+	1    8900 1800
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 9000 1500
+NoConn ~ 8900 1500
+NoConn ~ 8800 1500
+Wire Wire Line
+	8450 2200 10150 2200
+Wire Wire Line
+	8450 2100 9000 2100
+Wire Wire Line
+	9000 2100 9000 2000
+Wire Wire Line
+	8900 2000 8900 2050
+Wire Wire Line
+	8900 2050 9100 2050
+Wire Wire Line
+	9100 2050 9100 2100
+Wire Wire Line
+	9100 2100 9600 2100
 $EndSCHEMATC
