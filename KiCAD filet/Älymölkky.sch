@@ -212,7 +212,7 @@ F 3 "~" H 3750 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L nrf52810-custom:nRF52810-QCxx U1
+L Älymölkky-rescue:nRF52810-QCxx-nrf52810-custom U1
 U 1 1 5C5D854C
 P 5050 5050
 F 0 "U1" H 5050 3964 50  0000 C CNN
@@ -1160,7 +1160,6 @@ Wire Wire Line
 Connection ~ 2550 7450
 Wire Wire Line
 	2500 4350 2950 4350
-NoConn ~ 2500 4350
 $Comp
 L Connector:Conn_01x01_Male hupivia1
 U 1 1 5C69FFA8
@@ -1172,10 +1171,8 @@ F 3 "~" H 4150 1450 50  0001 C CNN
 	1    4150 1450
 	-1   0    0    1   
 $EndComp
-Text Label 3750 1450 2    50   ~ 0
-~GND
 Wire Wire Line
-	3750 1450 3950 1450
+	3750 1450 3850 1450
 $Comp
 L Device:Polyfuse Resettable_Fuse1
 U 1 1 5C6C0B83
@@ -1228,4 +1225,63 @@ Wire Wire Line
 Wire Wire Line
 	6600 5150 6600 5450
 NoConn ~ 5950 5450
+$Comp
+L Älymölkky-rescue:ACAG0201-2450-T-ceramic_antenna_library A1
+U 1 1 5C76537B
+P 1550 4500
+F 0 "A1" H 1475 4875 50  0000 C CNN
+F 1 "ACAG0201-2450-T" H 1475 4784 50  0000 C CNN
+F 2 "ceramic_antenna_footprint:ACAG0201-2450-T" H 1550 4500 50  0001 C CNN
+F 3 "" H 1550 4500 50  0001 C CNN
+	1    1550 4500
+	1    0    0    -1  
+$EndComp
+Text Label 700  4650 0    50   ~ 0
+ANTENNA
+Wire Wire Line
+	700  4650 1100 4650
+$Comp
+L power:Earth #PWR0124
+U 1 1 5C76B789
+P 1950 4500
+F 0 "#PWR0124" H 1950 4250 50  0001 C CNN
+F 1 "Earth" H 1950 4350 50  0001 C CNN
+F 2 "" H 1950 4500 50  0001 C CNN
+F 3 "~" H 1950 4500 50  0001 C CNN
+	1    1950 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4500 1850 4500
+$Comp
+L power:Earth #PWR0125
+U 1 1 5C771CF3
+P 1000 4350
+F 0 "#PWR0125" H 1000 4100 50  0001 C CNN
+F 1 "Earth" H 1000 4200 50  0001 C CNN
+F 2 "" H 1000 4350 50  0001 C CNN
+F 3 "~" H 1000 4350 50  0001 C CNN
+	1    1000 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 4350 1000 4350
+Text Label 3750 1450 2    50   ~ 0
+~GND
+$Comp
+L power:Earth #PWR?
+U 1 1 5C74A65C
+P 3850 1600
+F 0 "#PWR?" H 3850 1350 50  0001 C CNN
+F 1 "Earth" H 3850 1450 50  0001 C CNN
+F 2 "" H 3850 1600 50  0001 C CNN
+F 3 "~" H 3850 1600 50  0001 C CNN
+	1    3850 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 1450 3850 1600
+Connection ~ 3850 1450
+Wire Wire Line
+	3850 1450 3950 1450
 $EndSCHEMATC

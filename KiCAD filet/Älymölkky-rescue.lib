@@ -1,11 +1,26 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# nRF52810-QCxx-MCU_Nordic_modified
+# ACAG0201-2450-T-ceramic_antenna_library
 #
-DEF nRF52810-QCxx-MCU_Nordic_modified U 0 20 Y Y 1 F N
+DEF ACAG0201-2450-T-ceramic_antenna_library A 0 40 Y Y 1 F N
+F0 "A" -50 -300 50 H V C CNN
+F1 "ACAG0201-2450-T-ceramic_antenna_library" 0 300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -250 200 100 -200 0 1 0 N
+X input 1 -450 -150 200 R 50 50 1 1 I
+X GND 2 300 0 200 L 50 50 1 1 I
+X GND2 3 -450 150 200 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# nRF52810-QCxx-nrf52810-custom
+#
+DEF nRF52810-QCxx-nrf52810-custom U 0 20 Y Y 1 F N
 F0 "U" 0 50 50 H V C CNN
-F1 "nRF52810-QCxx-MCU_Nordic_modified" 0 -50 50 H V C CNN
+F1 "nRF52810-QCxx-nrf52810-custom" 0 -50 50 H V C CNN
 F2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm" 0 -1350 50 H I C CNN
 F3 "" -500 200 50 H I C CNN
 $FPLIST
