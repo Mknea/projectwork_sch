@@ -570,17 +570,6 @@ Wire Wire Line
 	9800 1500 9700 1500
 Wire Wire Line
 	9200 1500 9300 1500
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even Serial_wire_debug_interconnector1
-U 1 1 5C65B530
-P 1750 6600
-F 0 "Serial_wire_debug_interconnector1" H 1800 7017 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 1800 6926 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 1750 6600 50  0001 C CNN
-F 3 "~" H 1750 6600 50  0001 C CNN
-	1    1750 6600
-	1    0    0    -1  
-$EndComp
 Text Notes 1700 1000 0    50   ~ 0
 Power and ground test points
 Text Label 9300 1650 0    50   ~ 0
@@ -622,64 +611,38 @@ F 3 "~" H 2100 1400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1700 1400 1900 1400
-Text Label 2200 6400 0    50   ~ 0
+Text Label 2000 5800 0    50   ~ 0
 ~SWDIO
-Text Label 2200 6500 0    50   ~ 0
+Text Label 2000 5900 0    50   ~ 0
 ~SWDCLK
-Text Label 2200 6800 0    50   ~ 0
+Text Label 2000 6100 0    50   ~ 0
 ~Reset
-NoConn ~ 2050 6700
 Text Label 5950 5550 0    50   ~ 0
 ~SWO
-Text Label 2200 6600 0    50   ~ 0
+Text Label 2000 6000 0    50   ~ 0
 ~SWO
-Wire Wire Line
-	2200 6400 2050 6400
-Wire Wire Line
-	2050 6500 2200 6500
-Wire Wire Line
-	2200 6600 2050 6600
-Wire Wire Line
-	2200 6800 2050 6800
 $Comp
 L power:VDD #PWR0115
 U 1 1 5C695765
-P 1050 6400
-F 0 "#PWR0115" H 1050 6250 50  0001 C CNN
-F 1 "VDD" H 1067 6573 50  0000 C CNN
-F 2 "" H 1050 6400 50  0001 C CNN
-F 3 "" H 1050 6400 50  0001 C CNN
-	1    1050 6400
+P 2350 6200
+F 0 "#PWR0115" H 2350 6050 50  0001 C CNN
+F 1 "VDD" H 2367 6373 50  0000 C CNN
+F 2 "" H 2350 6200 50  0001 C CNN
+F 3 "" H 2350 6200 50  0001 C CNN
+	1    2350 6200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:Earth #PWR0116
 U 1 1 5C6957BC
-P 1050 6850
-F 0 "#PWR0116" H 1050 6600 50  0001 C CNN
-F 1 "Earth" H 1050 6700 50  0001 C CNN
-F 2 "" H 1050 6850 50  0001 C CNN
-F 3 "~" H 1050 6850 50  0001 C CNN
-	1    1050 6850
+P 2350 6300
+F 0 "#PWR0116" H 2350 6050 50  0001 C CNN
+F 1 "Earth" H 2350 6150 50  0001 C CNN
+F 2 "" H 2350 6300 50  0001 C CNN
+F 3 "~" H 2350 6300 50  0001 C CNN
+	1    2350 6300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1050 6400 1550 6400
-Wire Wire Line
-	1550 6500 1050 6500
-Wire Wire Line
-	1050 6500 1050 6600
-Wire Wire Line
-	1050 6600 1550 6600
-Wire Wire Line
-	1550 6800 1050 6800
-Wire Wire Line
-	1050 6800 1050 6600
-Connection ~ 1050 6600
-Wire Wire Line
-	1050 6800 1050 6850
-Connection ~ 1050 6800
-NoConn ~ 1550 6700
 $Comp
 L Connector:Conn_01x06_Male Serial_program/debug1
 U 1 1 5C6AC2F0
@@ -1035,10 +998,10 @@ Wire Wire Line
 Wire Wire Line
 	5550 2800 5550 3400
 $Comp
-L power:Earth #PWR?
+L power:Earth #PWR0127
 U 1 1 5C8923A6
 P 5800 3200
-F 0 "#PWR?" H 5800 2950 50  0001 C CNN
+F 0 "#PWR0127" H 5800 2950 50  0001 C CNN
 F 1 "Earth" H 5800 3050 50  0001 C CNN
 F 2 "" H 5800 3200 50  0001 C CNN
 F 3 "~" H 5800 3200 50  0001 C CNN
@@ -1046,10 +1009,10 @@ F 3 "~" H 5800 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:Earth #PWR?
+L power:Earth #PWR0128
 U 1 1 5C89245B
 P 6400 3200
-F 0 "#PWR?" H 6400 2950 50  0001 C CNN
+F 0 "#PWR0128" H 6400 2950 50  0001 C CNN
 F 1 "Earth" H 6400 3050 50  0001 C CNN
 F 2 "" H 6400 3200 50  0001 C CNN
 F 3 "~" H 6400 3200 50  0001 C CNN
@@ -1058,4 +1021,74 @@ F 3 "~" H 6400 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5800 3150 5800 3200
+$Comp
+L Connector:Conn_01x01_Male SWDIO1
+U 1 1 5C8807BA
+P 1800 5800
+F 0 "SWDIO1" H 1772 5776 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 1773 5821 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1800 5800 50  0001 C CNN
+F 3 "~" H 1800 5800 50  0001 C CNN
+	1    1800 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male SWDCLK1
+U 1 1 5C880E14
+P 1800 5900
+F 0 "SWDCLK1" H 1772 5876 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 1773 5921 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1800 5900 50  0001 C CNN
+F 3 "~" H 1800 5900 50  0001 C CNN
+	1    1800 5900
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male SWO1
+U 1 1 5C8817A7
+P 1800 6000
+F 0 "SWO1" H 1772 5976 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 1773 6021 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1800 6000 50  0001 C CNN
+F 3 "~" H 1800 6000 50  0001 C CNN
+	1    1800 6000
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male RESET1
+U 1 1 5C881848
+P 1800 6100
+F 0 "RESET1" H 1772 6076 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 1773 6121 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1800 6100 50  0001 C CNN
+F 3 "~" H 1800 6100 50  0001 C CNN
+	1    1800 6100
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male Power1
+U 1 1 5C8822A3
+P 1800 6200
+F 0 "Power1" H 1772 6176 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 1773 6221 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1800 6200 50  0001 C CNN
+F 3 "~" H 1800 6200 50  0001 C CNN
+	1    1800 6200
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male Ground1
+U 1 1 5C882301
+P 1800 6300
+F 0 "Ground1" H 1772 6276 50  0000 R CNN
+F 1 "Conn_01x01_Male" H 1773 6321 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1800 6300 50  0001 C CNN
+F 3 "~" H 1800 6300 50  0001 C CNN
+	1    1800 6300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2000 6200 2350 6200
+Wire Wire Line
+	2350 6300 2000 6300
 $EndSCHEMATC
