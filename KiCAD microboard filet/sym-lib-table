@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name nrf52810-qcxx)(type Legacy)(uri "C:/Users/joona/OneDrive/Työpöytä/Projects/pw/alymolkky_schematics/KiCAD filet/nrf52810-qcxx.lib")(options "")(descr ""))
+  (lib (name Älymölkky-rescue)(type Legacy)(uri ${KIPRJMOD}/Älymölkky-rescue.lib)(options "")(descr ""))
+)
