@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Älymölkky_micro-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -127,8 +126,6 @@ F 3 "~" H 3100 4350 50  0001 C CNN
 	1    3100 4350
 	0    -1   -1   0   
 $EndComp
-Text Label 2500 4350 0    50   ~ 0
-ANTENNA
 Text Label 7150 5150 2    50   ~ 0
 ~SDA_SDI
 Text Label 5950 4550 0    50   ~ 0
@@ -527,8 +524,6 @@ $EndComp
 Connection ~ 6400 2800
 Text Notes 2950 6100 0    50   ~ 0
 SWDCLK and SWDIO are serial wire debug ports
-Text Notes 1950 4250 0    50   ~ 0
-Placeholder for antenna
 Text Notes 5250 6550 0    50   ~ 0
 VSS pins:\nPin 20 to antenna ground\nPin 29 and 33 passive.
 Wire Wire Line
@@ -786,47 +781,6 @@ Connection ~ 7650 5900
 Wire Wire Line
 	7650 5900 8950 5900
 NoConn ~ 5950 5450
-$Comp
-L Älymölkky-rescue:ACAG0201-2450-T-ceramic_antenna_library A1
-U 1 1 5C76537B
-P 1550 4500
-F 0 "A1" H 1475 4875 50  0000 C CNN
-F 1 "ACAG0201-2450-T" H 1475 4784 50  0000 C CNN
-F 2 "ceramic_antenna_footprint:ACAG0201-2450-T" H 1550 4500 50  0001 C CNN
-F 3 "" H 1550 4500 50  0001 C CNN
-	1    1550 4500
-	1    0    0    -1  
-$EndComp
-Text Label 700  4650 0    50   ~ 0
-ANTENNA
-Wire Wire Line
-	700  4650 1100 4650
-$Comp
-L power:Earth #PWR0124
-U 1 1 5C76B789
-P 1950 4500
-F 0 "#PWR0124" H 1950 4250 50  0001 C CNN
-F 1 "Earth" H 1950 4350 50  0001 C CNN
-F 2 "" H 1950 4500 50  0001 C CNN
-F 3 "~" H 1950 4500 50  0001 C CNN
-	1    1950 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1950 4500 1850 4500
-$Comp
-L power:Earth #PWR0125
-U 1 1 5C771CF3
-P 1000 4350
-F 0 "#PWR0125" H 1000 4100 50  0001 C CNN
-F 1 "Earth" H 1000 4200 50  0001 C CNN
-F 2 "" H 1000 4350 50  0001 C CNN
-F 3 "~" H 1000 4350 50  0001 C CNN
-	1    1000 4350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1100 4350 1000 4350
 Text Label 1700 1700 2    50   ~ 0
 ~GND
 $Comp
@@ -968,6 +922,17 @@ F 1 "Earth" H 1700 1250 50  0001 C CNN
 F 2 "" H 1700 1400 50  0001 C CNN
 F 3 "~" H 1700 1400 50  0001 C CNN
 	1    1700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5C9CF874
+P 2500 4350
+F 0 "#PWR?" H 2500 4100 50  0001 C CNN
+F 1 "Earth" H 2500 4200 50  0001 C CNN
+F 2 "" H 2500 4350 50  0001 C CNN
+F 3 "~" H 2500 4350 50  0001 C CNN
+	1    2500 4350
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
